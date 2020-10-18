@@ -1,12 +1,12 @@
 {
   "posts": [
-    { "id": 1, "title": "Post 1", "connection":{"id":"abcd"} ,"photos":[{"_id":"abc", "downloadUrl":"https://www.pinclipart.com/picdir/big/338-3388991_free-download-valentine-day-heart-png-birthday-heart.png"}] },
-    { "id": 2, "title": "Post 2", "connection":{"id":"abcd"}  },
-    { "id": 3, "title": "Post 3", "connection":{"id":"abcd"}  }
+    { "id": "p1", "title": "Post 1", "connection":{"id":"abcd"} ,"photos":[{"_id":"abc", "downloadUrl":"https://www.pinclipart.com/picdir/big/338-3388991_free-download-valentine-day-heart-png-birthday-heart.png"}] },
+    { "id": "p2", "title": "Post 2", "connection":{"id":"abcd"}  },
+    { "id": "p3", "title": "Post 3", "connection":{"id":"abcd"}  }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
+    { "id": 1, "body": "some comment", "postId": "p1" },
+    { "id": 2, "body": "some comment", "postId": "p1" }
   ],
   "profile": {
     "name": "typicode"
