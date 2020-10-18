@@ -50,10 +50,28 @@
       "languageVersion": "2.9"
     },
     {
+      "name": "flutter_config",
+      "rootUri": "file:///Users/ishpun/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_config-1.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/ishpun/Documents/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.2"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/ishpun/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.4"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/ishpun/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
     },
     {
       "name": "matcher",
@@ -72,6 +90,12 @@
       "rootUri": "file:///Users/ishpun/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.7.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "pedantic",
+      "rootUri": "file:///Users/ishpun/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "sky_engine",
@@ -134,7 +158,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-10-18T12:53:00.843992Z",
+  "generated": "2020-10-18T13:51:45.429852Z",
   "generator": "pub",
   "generatorVersion": "2.9.2"
 }
