@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:experimental_flutter_plugin/experimental_flutter_plugin.dart';
 import 'package:experimental_flutter_plugin/models/post.dart';
+import 'package:experimental_flutter_plugin/models/config.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,11 +26,21 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    List<Post> posts =   await ExperimentalFlutterPlugin.getPosts(10,0);
+
+    Config config = new Config(
+        operatorId: 'operatorId',
+        clientId: 'clientId',
+        clientSecret: 'clientSecret',
+        apiUrl: 'apiUrl',
+        serverUrl: 'operatorId'
+    );
+
+    String token = await ExperimentalFlutterPlugin.init(config);
+    List<Post> posts =  await ExperimentalFlutterPlugin.getPosts(10,0);
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = posts.length.toString();// await ExperimentalFlutterPlugin.platformVersion;
+      platformVersion = token + posts.length.toString();// await ExperimentalFlutterPlugin.platformVersion;
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

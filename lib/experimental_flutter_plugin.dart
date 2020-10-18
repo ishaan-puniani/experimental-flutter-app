@@ -1,10 +1,14 @@
 
 import 'dart:async';
 
+import 'package:experimental_flutter_plugin/services/authService.dart';
 import 'package:experimental_flutter_plugin/services/postsService.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_config/flutter_config.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+
+import 'models/auth.dart';
+import 'models/config.dart';
 import 'models/post.dart';
 
 class ExperimentalFlutterPlugin {
@@ -16,15 +20,14 @@ class ExperimentalFlutterPlugin {
     return version;
   }
 
-  static Future<String> get init async {
-    FlutterConfig.get('FABRIC_ID'); // returns 'abcdefgh'
-
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
+  static Future<String> init(Config config) async {
+    final Auth auth = await authenticate(config);
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('token', auth.token);
+    return auth.token;
   }
 
   static Future<List<Post>> getPosts(int limit, int offset) async {
-    // final String  API_HOST = FlutterConfig.get('API_HOST'); // returns 'abcdefgh'
 
     return fetchPosts(limit, offset);
   }
